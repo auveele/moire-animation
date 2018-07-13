@@ -1,11 +1,11 @@
 import java.io.File;
 
 class Moire {
-  
+
   // CONFIGURACIÓN
   int column_width = 4;
   boolean show_lines = true;
-  
+
   // Variable
   PImage[] image_list = new PImage[5];
   PGraphics merged_image;
@@ -122,13 +122,18 @@ class Moire {
     lines_image.endDraw();
   }
 
-  void update() {
-    index = (index + 1) % image_count;
-    create_lines(index);
-  }
-
   void display() {
     image(merged_image, 0, 0);
-    if (show_lines == true) image(lines_image, 0, 0);
+    if (show_lines == true) {
+      index = (index + 1) % image_count;
+      create_lines(index);
+      image(lines_image, 0, 0);
+    }
+  }
+
+  void export() {
+    merged_image.save("Merged.jpg");
+    create_lines(0);
+    lines_image.save("Lines.png");
   }
 }

@@ -14,15 +14,25 @@ void setup() {
   // Tamaño inicial
   size(953, 1000);
   surface.setTitle("Vista previa");
-  
-  surface.setLocation(600, 200);
 
+  surface.setLocation(600, 200);
 }
 
 /*
   MAIN DRAW
  */
 void draw() {
-  m.update();
+  // m.update();
   m.display();
+}
+
+void keyReleased() {
+  switch(key) {
+  case 'e': 
+    m.export();
+    break;
+  case 'h':
+    m.show_lines = !m.show_lines;
+    break;
+  }
 }

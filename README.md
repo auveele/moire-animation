@@ -7,11 +7,9 @@ Create moire animations in processing that you can export and print.
 You can view the animation in screen, but there are still things to do.
 
 
-To show-hide stripes change in **moire.pde**:
-
-SHOW `boolean show_lines = true;`
-
-HIDE `boolean show_lines = false;`
+### KEY SHORTCUTS
+- PRESS **E** - To export lines and merged image.
+- PRESS **H** - To show/hide lines.
 
 ### TO DO LIST:
 - Implement the GUI control panel
