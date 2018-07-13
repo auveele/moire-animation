@@ -4,7 +4,7 @@ class Moire {
   
   // CONFIGURACIÓN
   int column_width = 4;
-  boolean show_lines = false;
+  boolean show_lines = true;
   
   // Variable
   PImage[] image_list = new PImage[5];
